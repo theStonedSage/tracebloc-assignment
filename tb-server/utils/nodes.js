@@ -1,4 +1,4 @@
-class NodesInstance {
+class NodesCache {
   nodes;
 
   constructor() {
@@ -30,4 +30,4 @@ class NodesInstance {
   }
 }
 
-module.exports = NodesInstance;
+module.exports = NodesCache;

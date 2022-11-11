@@ -3,7 +3,7 @@ const app = express();
 const http = require("http");
 const server = http.createServer(app);
 const { Server } = require("socket.io");
-const NodesInstance = require("./utils/nodes");
+const NodesCache = require("./utils/nodes");
 const CryptoJS = require("crypto-js");
 
 const secretKey = "mySecretKey";
@@ -14,7 +14,7 @@ const io = new Server(server, {
   },
 });
 
-const nodes = new NodesInstance();
+const nodes = new NodesCache();
 const connectionsLimit = 4;
 
 app.get("/", (req, res) => {
